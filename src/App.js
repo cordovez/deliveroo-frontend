@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Hero from "./Components/Hero";
 
 function App() {
   const [data, setData] = useState({});
@@ -21,7 +22,9 @@ function App() {
   return isLoading ? (
     <p> Data is loading ... </p>
   ) : (
-    <div>{data.restaurant.name}</div>
+    <div>
+      <Hero data={data} />
+    </div>
   );
 }
 
